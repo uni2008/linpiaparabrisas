@@ -10,6 +10,7 @@ radio.onReceivedNumber(function (receivedNumber) {
     }
 })
 function ezkerreko_intermitentea () {
+    music.startMelody(music.builtInMelody(Melodies.Entertainer), MelodyOptions.Once)
     basic.showLeds(`
         # # . . .
         # # . . .
@@ -43,9 +44,10 @@ function ezkerreko_intermitentea () {
     basic.pause(500)
 }
 function linpiaparabrisas () {
-    pins.servoWritePin(AnalogPin.P0, 180)
+    pins.servoWritePin(AnalogPin.P0, randint(0, 180))
 }
 function eskuineko_intermitentea () {
+    music.startMelody(music.builtInMelody(Melodies.Entertainer), MelodyOptions.Once)
     basic.showLeds(`
         . . . # #
         . . . # #
